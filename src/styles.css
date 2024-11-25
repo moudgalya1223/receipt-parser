@@ -93,6 +93,8 @@ video{
     }
 
     .scan-recipt-class{
+        width: 100%;
+        height: auto;
         flex-direction: column-reverse;
     }
     .scan-recipt-class >div > vedio{
