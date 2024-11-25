@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { ScanRecieptComponent } from './scan-reciept/scan-reciept.component';
+import { QrScannerComponent } from './qr-scanner/qr-scanner.component';
+const routes: Routes = [
+  {path:'scan',component:ScanRecieptComponent},
+  {path:'scan-qr',component:QrScannerComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  
+ }

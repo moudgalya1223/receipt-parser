@@ -1,0 +1,11 @@
+<div *ngIf="!parsedAmount">
+    <video #video width="100%" autoplay></video>
+    <button (click)="captureImage()">Capture Receipt</button>
+  </div>
+  
+  <!-- <div *ngIf="parsedAmount"> -->
+    <div>
+    <p>Total Amount: {{ parsedAmount }}</p>
+    <button (click)="goToPayment()">Proceed to Pay</button>
+  </div>
+  
