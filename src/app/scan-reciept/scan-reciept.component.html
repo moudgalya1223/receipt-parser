@@ -1,11 +1,17 @@
-<div *ngIf="!parsedAmount">
-    <video #video width="100%" autoplay></video>
-    <button (click)="captureImage()">Capture Receipt</button>
-  </div>
-  
-  <!-- <div *ngIf="parsedAmount"> -->
-    <div>
-    <p>Total Amount: {{ parsedAmount }}</p>
-    <button (click)="goToPayment()">Proceed to Pay</button>
-  </div>
-  
+<div class="camera-container">
+  <video #video width="320" height="240" autoplay></video>
+  <canvas #canvas style="display: none;"></canvas>
+</div>
+
+<button (click)="captureImage()">Capture</button>
+
+<!-- Image Upload -->
+<input type="file" (change)="onImageUpload($event)" accept="image/*">
+
+<!-- Display the parsed amount -->
+<div *ngIf="parsedAmount">
+  <p>Parsed Amount: {{ parsedAmount }}</p>
+</div>
+
+<!-- Payment Button -->
+<button (click)="goToPayment()" *ngIf="parsedAmount">Proceed to Payment</button>

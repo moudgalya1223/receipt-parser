@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ScanRecieptComponent } from './scan-reciept/scan-reciept.component';
+import { ScanReceiptComponent } from './scan-reciept/scan-reciept.component';
 import { QrScannerComponent } from './qr-scanner/qr-scanner.component';
 const routes: Routes = [
-  {path:'scan',component:ScanRecieptComponent},
+  {path:'scan',component:ScanReceiptComponent},
   {path:'scan-qr',component:QrScannerComponent}
 ];
 

@@ -24,13 +24,20 @@ export class QrScannerComponent {
     console.log(this.upiId)
     this.redirectToUpiApp(this.upiId, amount);
   }
-
   redirectToUpiApp(upiId: string, amount: string) {
+    if (!upiId) {
+      alert('Invalid UPI ID');
+      return;
+    }
+  
     const upiUrl = `upi://pay?pa=${upiId}&pn=Merchant&mc=0000&tid=1234567890&tr=transaction123&tn=Payment&am=${amount}&cu=INR`;
-    window.location.href = upiUrl;
-    if (!window.location.href) {
-      alert('UPI not supported on this device. Please use a different method to pay.');
+  
+    try {
+      window.location.href = upiUrl;
+    } catch (error) {
+      console.error('Error redirecting to UPI app:', error);
+      alert('Failed to redirect to UPI app. Please try again later.');
     }
   }
-
+  
 }
