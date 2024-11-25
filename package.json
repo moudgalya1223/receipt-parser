@@ -15,6 +15,7 @@
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
+    "@angular/fire": "^18.0.1",
     "@angular/forms": "^17.0.0",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
@@ -24,6 +25,7 @@
     "@zxing/ngx-scanner": "^19.0.0",
     "axios": "^1.7.7",
     "express": "^4.18.2",
+    "firebase": "^10.14.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
