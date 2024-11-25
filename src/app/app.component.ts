@@ -6,12 +6,8 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
+export class AppComponent {
   constructor(private router: Router) {}
-navigateToScan() {
-  this.router.navigate(['/scan']);
-throw new Error('Method not implemented.');
-}
 
   title = 'receipt-parser';
   hiddenComponents: any;
