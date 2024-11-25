@@ -1,4 +1,7 @@
-<!-- <h1> welcome venkata lakshmi </h1>
-<button (click)="navigateToScan()">Go to Scan</button> -->
-    <router-outlet></router-outlet>
-    <app-scan-reciept></app-scan-reciept>
+<div class="container">
+    <h1 id="main-title"> Welcome <br>
+        <span>Billing Parser</span></h1>
+    <button (click)="letGo()" id="main-btn"><a [routerLink]="'/scan'">Let's go</a></button>
+</div>
+
+<router-outlet></router-outlet>

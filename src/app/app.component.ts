@@ -4,17 +4,22 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
+export class AppComponent {
   constructor(private router: Router) {}
-navigateToScan() {
-  this.router.navigate(['/scan']);
-throw new Error('Method not implemented.');
-}
 
   title = 'receipt-parser';
-  ngOnDestroy(): void {
+  hiddenComponents: any;
+
+  letGo() {
+    // Hiding both the button and the h1 by selecting their ids
+    const button = document.getElementById('main-btn');
+    const title = document.getElementById('main-title');
     
+    if (button && title) {
+      button.style.display = 'none';
+      title.style.display = 'none';
+    }
   }
 }

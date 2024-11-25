@@ -1,17 +1,25 @@
-<div class="camera-container">
-  <video #video width="320" height="240" autoplay></video>
-  <canvas #canvas style="display: none;"></canvas>
+<!-- 
+<div class="container">
+  <h1> welcome <br>
+      <span>Billing Parser</span></h1>
+<button class="main-btn"><a [routerLink] = "'/scan'">Let's go</a> </button>
+</div> -->
+
+<!-- <router-outlet></router-outlet> -->
+
+<div class="scan-recipt-class">
+
+  <div class="recipt-buttons">
+    <button (click)="captureImage()">Capture Receipt</button>
+    <button (click)="goToPayment()">Proceed to Pay</button>
+    <p>Total Amount: {{ parsedAmount }}</p>
+   </div>
+
+  <div  *ngIf="!parsedAmount">
+   <video #video width="100%" autoplay></video>
+ </div>
+ 
+ <!-- <div *ngIf="parsedAmount"> -->
+   
 </div>
-
-<button (click)="captureImage()">Capture</button>
-
-<!-- Image Upload -->
-<input type="file" (change)="onImageUpload($event)" accept="image/*">
-
-<!-- Display the parsed amount -->
-<div *ngIf="parsedAmount">
-  <p>Parsed Amount: {{ parsedAmount }}</p>
-</div>
-
-<!-- Payment Button -->
-<button (click)="goToPayment()" *ngIf="parsedAmount">Proceed to Payment</button>
+  
