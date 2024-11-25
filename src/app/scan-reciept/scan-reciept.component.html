@@ -1,11 +1,25 @@
-<div *ngIf="!parsedAmount">
-    <video #video width="100%" autoplay></video>
+<!-- 
+<div class="container">
+  <h1> welcome <br>
+      <span>Billing Parser</span></h1>
+<button class="main-btn"><a [routerLink] = "'/scan'">Let's go</a> </button>
+</div> -->
+
+<!-- <router-outlet></router-outlet> -->
+
+<div class="scan-recipt-class">
+
+  <div class="recipt-buttons">
     <button (click)="captureImage()">Capture Receipt</button>
-  </div>
-  
-  <!-- <div *ngIf="parsedAmount"> -->
-    <div>
-    <p>Total Amount: {{ parsedAmount }}</p>
     <button (click)="goToPayment()">Proceed to Pay</button>
-  </div>
+    <p>Total Amount: {{ parsedAmount }}</p>
+   </div>
+
+  <div  *ngIf="!parsedAmount">
+   <video #video width="100%" autoplay></video>
+ </div>
+ 
+ <!-- <div *ngIf="parsedAmount"> -->
+   
+</div>
   

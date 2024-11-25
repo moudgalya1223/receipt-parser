@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    background: rgb(4,155,245);
+    background: linear-gradient(0deg, rgba(4,155,245,1) 0%, rgba(255,255,255,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+    margin-left: 2rem;
+   
+}
+h1{
+    font-size: 5rem;
+    color: white;
+    line-height: 1;
+}
+
+#main-btn{
+    margin-top: 2rem;
+    
+}
+button{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+   
+    padding: 5px 10px;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 128, 255);
+    background-color: white;
+}
+
+
+.scan-recipt-class{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0px;
+    gap: 1rem;
+
+}
+
+button{
+    background-color: white;
+    color: rgb(0, 128, 255);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.recipt-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2rem;
+}
+p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+}
+video{
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 480px){
+    .container{
+        text-align: center;
+        margin-left: 10px;
+    }
+    .container > h1{
+        text-align: left;
+    }
+
+    .scan-recipt-class{
+        flex-direction: column-reverse;
+    }
+    .scan-recipt-class >div > vedio{
+        width: 100%;
+        height: auto;
+    }
+    .recipt-buttons{
+        gap: 1rem;
+    }
+}
+
